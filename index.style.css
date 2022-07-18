@@ -1,0 +1,126 @@
+    body{
+      margin          : 0px;
+    }
+    #Name{
+      font-size       : 18px;
+      margin: -20px;
+    }
+
+    /*
+    a:link {
+      color : pink;
+    }
+    a:visited {
+      color : black;
+    }
+    a:hover {
+      color : red;
+    }
+    a:active {
+      color : green
+    }
+    */
+    a:hover {
+      color : red;
+    }  
+    
+    a{
+      color           :black;
+      text-decoration : none;
+    }
+    h1{
+      font-size       : 80px;
+      text-align      : center;
+      border-bottom   : 1px solid gray;
+      margin          : 0px;
+      padding         : 20px;
+    }
+    #grid ol{
+      font-size       : 25px;
+      border-right    : 1px solid gray;
+      width           : 170px;
+      margin          : 0px;
+      margin-left     : 40px;
+      padding         : 20px;
+    }
+    h2{
+      font-size       : 30px;
+      /* color           :black; */
+    }
+    #grid{
+      display               : grid;
+      grid-template-rows    : 500px;
+      grid-template-columns : 500px 1fr
+    }
+    #grid2{
+      display               : grid;
+      margin                : 30px;
+      grid-template-columns : 600px 1fr
+    }
+    #grid3{
+      display               : grid;
+      border-top            : 1px solid gray;
+      border-left           : 1px solid gray;
+      margin-left           : 250px;
+      padding-bottom        : 50px;
+      color                 :black;
+      background            : rgb(241, 241, 241);
+      grid-template-columns : 400px 400px 400px
+    }
+    #html{
+      margin-left    : 280px;
+      padding-top    : 27px;
+      padding-bottom : 50px;
+    }
+    #css{
+      margin-left    : 262px;
+      padding-top    : 27px;
+      padding-bottom : 50px;
+    }
+    #js{
+      margin-left    : 252px;
+      margin-right   : 1px;
+      padding-top    : 27px;
+      padding-bottom : 50px;
+    }
+
+    #onclick{
+      margin-left    : -30px;
+    }
+
+
+    @media(max-width:800px){
+      #grid{
+        display : block;
+      }
+      #grid ol{
+      border-right    : 0px solid gray;
+      }
+      #grid2{
+        display : block;
+      }   
+      #grid3{
+        display  :block;
+        border-top            : 0px solid gray;
+        border-left           : 0px solid gray;
+        margin-left           : 0px;
+      } 
+      #html{
+        margin-left    : 30px;
+        padding-top    : 0px;
+        padding-bottom : 0px;
+      }
+      #css{
+        margin-left    : 30px;
+        padding-top    : 0px;
+        padding-bottom : 0px;
+      }
+      #js{
+        margin-left    : 30px;
+        margin-right   : 0px;
+        padding-top    : 0px;
+        padding-bottom : 0px;
+      }
+      
+            
+  }

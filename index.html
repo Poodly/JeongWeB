@@ -4,125 +4,65 @@
   <title>JEONG WEB</title>
   <meta charset="utf-8">
 
-  <style>
-    body{
-      margin          : 0px;
-    }
-    #Name{
-      font-size       : 18px;
-      margin: -20px;
-    }
-    a{
-      color           :black;
-      text-decoration : none;
-    }
-    h1{
-      font-size       : 80px;
-      text-align      : center;
-      border-bottom   : 1px solid gray;
-      margin          : 0px;
-      padding         : 20px;
-    }
-    #grid ol{
-      font-size       : 25px;
-      border-right    : 1px solid gray;
-      width           : 170px;
-      margin          : 0px;
-      margin-left     : 40px;
-      padding         : 20px;
-    }
-    h2{
-      font-size       : 30px;
-    }
-    #grid{
-      display               : grid;
-      grid-template-rows    : 500px;
-      grid-template-columns : 500px 1fr
-    }
-    #grid2{
-      display               : grid;
-      margin                : 30px;
-      grid-template-columns : 600px 1fr
-    }
-    #grid3{
-      display               : grid;
-      border-top            : 1px solid gray;
-      border-left           : 1px solid gray;
-      margin-left           : 250px;
-      padding-bottom        : 50px;
-      background            : rgb(241, 241, 241);
-      grid-template-columns : 400px 400px 400px
-    }
-    #html{
-      margin-left    : 280px;
-      padding-top    : 27px;
-      padding-bottom : 50px;
-    }
-    #css{
-      margin-left    : 262px;
-      padding-top    : 27px;
-      padding-bottom : 50px;
-    }
-    #js{
-      margin-left    : 252px;
-      margin-right   : 1px;
-      padding-top    : 27px;
-      padding-bottom : 50px;
-    }
-
-    @media(max-width:800px){
-      #grid{
-        display : block;
-      }
-      #grid ol{
-      border-right    : 0px solid gray;
-      }
-      #grid2{
-        display : block;
-      }   
-      #grid3{
-        display  :block;
-        border-top            : 0px solid gray;
-        border-left           : 0px solid gray;
-        margin-left           : 0px;
-      } 
-      #html{
-        margin-left    : 30px;
-        padding-top    : 0px;
-        padding-bottom : 0px;
-      }
-      #css{
-        margin-left    : 30px;
-        padding-top    : 0px;
-        padding-bottom : 0px;
-      }
-      #js{
-        margin-left    : 30px;
-        margin-right   : 0px;
-        padding-top    : 0px;
-        padding-bottom : 0px;
-      }  
-  }
-
-  </style>
-
-
+  <link rel="stylesheet" href="index.style.css">
 
 </head>
 <body>
-  <h1><a href="index.html">HOME
-    <div id="Name"> <p> Jeong Seong Hoon </p> </div> </a>
-  </h1>
-   
-  <div id="grid">
+  <h1><a href="index.html">HOME</a>
+    <a href="index.html"><div id="Name"> <p> Jeong Seong Hoon </p> </div> </a>
+</h1>
+  
+  <div class="grid" id="grid">   <!-- grid  --> 
     <ol>
-      <li><a href="2.html.html">HTML</a></li>
-      <li><a href="3.CSS.html" >CSS</a></li>
-      <li><a href="4.Java.html">JavaScript</a></li>
-    </ol>
+      <li><a href="2.html.html">HTML       </a></li>
+      <li><a href="3.CSS.html" >CSS        </a></li>
+      <li><a href="4.Java.html">JavaScript </a></li>
+      
+      <div id="onclick">
+      <input id="Dark_Light" type="button" value="Dark" onclick="
+        var body   = document.querySelector    ('body'  );        
+        var a_list = document.querySelectorAll ('a'     );
+        var grid3  = document.querySelector    ('#grid3');
+        
+        if(this.value === 'Dark'){
+          body.style.backgroundColor     = 'black';
+          body.style.color               = 'white';   
 
-        <div id="grid2">
+          var i = 0;
+            while(i < a_list.length){
+              console.log(a_list[i]);
+              a_list[i].style.color      = 'white';
+              i = i + 1;
+            }
+
+          grid3.style.backgroundColor    = 'black';
           
+          this.value = 'Light';
+        }
+         
+        else {
+          body.style.backgroundColor     = 'white';
+          body.style.color               = 'black';  
+
+          var i = 0;
+            while(i < a_list.length){
+              console.log(a_list[i]);
+              a_list[i].style.color      = 'black';
+              i = i + 1;
+            }          
+               
+          grid3.style.backgroundColor    = 'rgb(241, 241, 241)';
+
+          this.value = 'Dark';
+        }
+        ">
+        </div>
+    </ol>                 <!-- grid  -->
+
+
+
+        <div id="grid2">  <!-- grid2  -->
+      
           <div class="Dog" id= "Dog1">
           <p>
             <h2>Cute Dog</h2>
@@ -132,37 +72,40 @@
           </P> </div>
               
           <div class="Dog" id= "Dog2">  
-          <p> <h2>Cute Dog</h2>
-            <img src="DOG.jpg" width="473" > </p>  
-          </div> 
-          <!--<p>안녕하세요</p>
-          <p><font size="100">코딩 공부중입니다</font></p>-->
-          
-        </div> <!-- grid2  -->
+          <p> 
+            <h2>Cute Dog</h2>
+            <img src="DOG.jpg" width="473" > 
+          </p> </div>  
+
+        </div>            <!-- grid2  -->
   </div>
     
 
-  <div id="grid3">
+
+  <div id="grid3">        <!-- grid3  -->  
     <div class="html" id= "html">  
-      <a href="2.html.html"> <h2>HTML</h2>
+      <a href="2.html.html"> <h2>HTML</h2> </a> 
         <img src="html.png" width="290px" height="180px"> </a>
       </div>
 
       <div class="css" id= "css">  
-        <a href="3.CSS.html"> <h2>CSS</h2>
+        <a href="3.CSS.html"> <h2>CSS</h2> </a>
           <img src="css.png" width="300px"> </a>
         </div>
 
       <div class="js" id= "js">  
-        <a href="4.Java.html"> <h2>JavaScript</h2>
+        <a href="4.Java.html"> <h2>JavaScript</h2> </a>
           <img src="JS.jpg" width="300px" height="180px"> </a>
         </div>
-  </div>
+  </div>                  <!-- grid3  --> 
+ 
+
+</body>
+</html>
+
 
 <!-- 
   <input type="checkbox">
   <input type="checkbox">
   <input type="checkbox">
---> 
-</body>
-</html>
+-->

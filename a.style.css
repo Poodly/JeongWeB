@@ -1,13 +1,14 @@
 
-#active {
-    color:red;
-}
+
+a:hover {
+  color : red;
+}  
+
 a {
 color:black;
 text-decoration: none;
-}
-.saw {
-color:gray;
+
+
 }
 h1 {
 font-size: 80px;
@@ -61,17 +62,20 @@ h2{
   margin-right          : 100px;
 }
 
-
+#onclick{
+  margin-left    : -30px;
+}
 
 @media(max-width:800px){
   #grid{
-    display : block;
+    display      : block;
+    margin-left  : 20px;
   }
   #grid ol{
-  border-right    : 0px solid gray;
-  
+    border-right : 0px solid gray;
+    padding-left : 0px;
   }
   #grid2{
-    display : block;
+    display      : block;
   }
 }
