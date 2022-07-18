@@ -6,22 +6,26 @@
 
   <link rel="stylesheet" href="index.style.css">
 
+  <!-- function  -->
   <script>
+    function self_listAll(self,color){ 
+      var a_list = document.querySelectorAll (self);
+      var i = 0;
+        while(i < a_list.length){
+          console.log(a_list[i]);
+          a_list[i].style.color      = color;
+          i = i + 1;
+        }
+      }
     function Dark_LightHandler(self){
-      var body   = document.querySelector    ('body'  );        
-      var a_list = document.querySelectorAll ('a'     );
+      var body   = document.querySelector    ('body'  );              
       var grid3  = document.querySelector    ('#grid3');
       
       if(self.value === 'Dark'){
         body.style.backgroundColor     = 'black';
         body.style.color               = 'white';   
 
-        var i = 0;
-          while(i < a_list.length){
-            console.log(a_list[i]);
-            a_list[i].style.color      = 'white';
-            i = i + 1;
-          }
+        self_listAll('a','white')
 
         grid3.style.backgroundColor    = 'black';
         
@@ -32,12 +36,7 @@
         body.style.backgroundColor     = 'white';
         body.style.color               = 'black';  
 
-        var i = 0;
-          while(i < a_list.length){
-            console.log(a_list[i]);
-            a_list[i].style.color      = 'black';
-            i = i + 1;
-          }          
+        self_listAll('a','black')          
               
         grid3.style.backgroundColor    = 'rgb(241, 241, 241)';
 
@@ -45,14 +44,15 @@
       }      
     }
   </script>
+  <!-- function  -->
 
 </head>
 <body>
   <h1><a href="index.html">HOME</a>
     <a href="index.html"><div id="Name"> <p> Jeong Seong Hoon </p> </div> </a>
-</h1>
+  </h1>
   
-  <div class="grid" id="grid">   <!-- grid  --> 
+  <div class="grid" id="grid">  <!-- grid1.ol --> 
     <ol>
       <li><a href="2.html.html">HTML       </a></li>
       <li><a href="3.CSS.html" >CSS        </a></li>
@@ -62,8 +62,6 @@
       <input id="Dark_Light" type="button" value="Dark" onclick="Dark_LightHandler(this)">
       </div>
     </ol>                        <!-- grid  -->
-
-
 
         <div id="grid2">  <!-- grid2  -->
       
@@ -84,9 +82,7 @@
         </div>            <!-- grid2  -->
   </div>
     
-
-
-  <div id="grid3">        <!-- grid3  -->  
+  <div id="grid3">              <!-- grid3    -->  
     <div class="html" id= "html">  
       <a href="2.html.html"> <h2>HTML</h2> 
         <img src="html.png" width="290px" height="180px"> </a>
@@ -101,15 +97,7 @@
         <a href="4.Java.html"> <h2>JavaScript</h2>
           <img src="JS.jpg" width="300px" height="180px"> </a>
         </div>
-  </div>                  <!-- grid3  --> 
+  </div>                        <!-- grid3    --> 
  
-
 </body>
 </html>
-
-
-<!-- 
-  <input type="checkbox">
-  <input type="checkbox">
-  <input type="checkbox">
--->
