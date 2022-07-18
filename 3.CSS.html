@@ -6,6 +6,39 @@
 
   <link rel="stylesheet" href="a.style.css">
 
+  <script>
+    function Dark_LightHandlerA(self){
+      var body   = document.querySelector    ('body'  );        
+      var a_list = document.querySelectorAll ('a'     );
+      
+      if(self.value === 'Dark'){
+        body.style.backgroundColor     = 'black';
+        body.style.color               = 'white';   
+
+        var i = 0;
+          while(i < a_list.length){
+            console.log(a_list[i]);
+            a_list[i].style.color      = 'white';
+            i = i + 1;
+          }       
+        self.value                     = 'Light';
+      }
+        
+      else {
+        body.style.backgroundColor     = 'white';
+        body.style.color               = 'black';  
+
+        var i = 0;
+          while(i < a_list.length){
+            console.log(a_list[i]);
+            a_list[i].style.color      = 'black';
+            i = i + 1;
+          }                         
+        self.value                     = 'Dark';
+      }
+    }
+  </script>
+
 </head>
 <body>
   <h1><a href="index.html">HOME</a>
@@ -19,37 +52,8 @@
     <li><a href="4.Java.html"class="saw">JavaScript</a></li>
 
     <div id="onclick">
-      <input id="Dark_Light" type="button" value="Dark" onclick="
-        var body   = document.querySelector    ('body'  );        
-        var a_list = document.querySelectorAll ('a'     );
-        
-        if(this.value === 'Dark'){
-          body.style.backgroundColor     = 'black';
-          body.style.color               = 'white';   
-
-          var i = 0;
-            while(i < a_list.length){
-              console.log(a_list[i]);
-              a_list[i].style.color      = 'white';
-              i = i + 1;
-            }       
-          this.value                     = 'Light';
-        }
-         
-        else {
-          body.style.backgroundColor     = 'white';
-          body.style.color               = 'black';  
-
-          var i = 0;
-            while(i < a_list.length){
-              console.log(a_list[i]);
-              a_list[i].style.color      = 'black';
-              i = i + 1;
-            }                         
-          this.value                     = 'Dark';
-        }
-        ">
-        </div>
+      <input id="Dark_Light" type="button" value="Dark" onclick="Dark_LightHandlerA(this)">
+    </div>
   </ol>
 
     <div di="A">
