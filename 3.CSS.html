@@ -3,40 +3,8 @@
 <head>
   <title>web-css</title>
   <meta charset="utf-8">
-
   <link rel="stylesheet" href="a.style.css">
-
-  <script>
-    function self_listAll(self,color){ 
-      var a_list = document.querySelectorAll (self);
-      var i = 0;
-        while(i < a_list.length){
-          console.log(a_list[i]);
-          a_list[i].style.color      = color;
-          i = i + 1;
-        }
-      }
-    function Dark_LightHandlerA(self){
-      var body   = document.querySelector    ('body'  );        
-      
-      if(self.value === 'Dark'){
-        body.style.backgroundColor     = 'black';
-        body.style.color               = 'white';   
-
-        self_listAll('a','white')       
-        self.value                     = 'Light';
-      }
-        
-      else {
-        body.style.backgroundColor     = 'white';
-        body.style.color               = 'black';  
-
-        self_listAll('a','black')                        
-        self.value                     = 'Dark';
-      }
-    }
-  </script>
-
+  <script src="1a_colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">HOME</a>
